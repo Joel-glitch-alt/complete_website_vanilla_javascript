@@ -24,30 +24,31 @@
   <section id="home" class="hero">
     <div class="hero-content">
       <h1>Hi, I'm <span>Joel Addition</span></h1>
-      <p>An Azure Cloud & DevOps Engineer specializing in Integration, Deployment, and Mobile App Development.</p>
+      <p>A Software & DevOps Engineer passionate about building scalable applications.</p>
+      <img src="images/computers.jpg" alt="Laptops and Mobile Devices" class="hero-image">
       <button id="cta-button">Explore My Work</button>
     </div>
   </section>
 
   <section id="about" class="about">
     <h2>About Me</h2>
-    <p>I am an experienced Software Engineer, Azure Cloud Engineer, and DevOps Engineer with expertise in CI/CD pipelines, cloud deployment, and mobile app development using Flutter with Node.js as the backend.</p>
+    <p>I am an experienced Azure Cloud Engineer, DevOps Engineer specializing in Integration & Deployment, and a Mobile App Developer using Flutter with Node.js as my backend. My goal is to create efficient, scalable, and user-friendly applications.</p>
   </section>
 
   <section id="projects" class="projects">
     <h2>My Projects</h2>
     <div class="project-grid">
       <div class="project-card">
-        <h3>Cloud Deployment Automation</h3>
-        <p>A scalable cloud deployment solution using Azure DevOps and Kubernetes.</p>
+        <h3>Business Website</h3>
+        <p>A fully responsive business website with a modern UI.</p>
       </div>
       <div class="project-card">
-        <h3>Mobile App (Flutter)</h3>
-        <p>A cross-platform mobile application powered by Flutter and Node.js.</p>
+        <h3>JavaScript Web App</h3>
+        <p>An interactive and dynamic web application.</p>
       </div>
       <div class="project-card">
-        <h3>CI/CD Pipeline</h3>
-        <p>Automated CI/CD workflow with GitHub Actions and Azure DevOps.</p>
+        <h3>Portfolio Website</h3>
+        <p>A personal portfolio to showcase my skills and projects.</p>
       </div>
     </div>
   </section>
@@ -63,17 +64,13 @@
   </section>
 
   <footer>
-    <p id="footer-date"></p>
+    <p id="current-date">&copy; <span id="year"></span> Joel Addition. All rights reserved.</p>
   </footer>
 
   <script>
-    function updateFooterTime() {
-      const footer = document.getElementById('footer-date');
-      const now = new Date();
-      footer.textContent = `© ${now.getFullYear()} Joel Addition. Last updated: ${now.toLocaleString()}`;
-    }
-    updateFooterTime();
-    setInterval(updateFooterTime, 60000); // Update every 60 seconds
+    // Update the year in the footer dynamically
+    document.getElementById("year").textContent = new Date().getFullYear();
   </script>
+
 </body>
 </html>
