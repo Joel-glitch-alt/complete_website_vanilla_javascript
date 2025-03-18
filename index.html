@@ -10,7 +10,7 @@
 <body>
 
   <header>
-    <nav class="navbar">
+    <nav>
       <div class="logo">Joel Addition</div>
       <ul class="nav-links">
         <li><a href="#home">Home</a></li>
@@ -21,64 +21,59 @@
     </nav>
   </header>
 
-  <main>
-    <section id="home" class="hero">
-      <div class="hero-content">
-        <h1>Hi, I'm <span class="highlight">Joel Addition</span></h1>
-        <p>A Software & DevOps Engineer passionate about building scalable applications.</p>
-        <a href="#projects" class="btn">Explore My Work</a>
-      </div>
-    </section>
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Hi, I'm <span>Joel Addition</span></h1>
+      <p>An Azure Cloud & DevOps Engineer specializing in Integration, Deployment, and Mobile App Development.</p>
+      <button id="cta-button">Explore My Work</button>
+    </div>
+  </section>
 
-    <section id="about" class="about">
-      <div class="container">
-        <h2>About Me</h2>
-        <p>
-          I am an experienced Software Engineer and DevOps Engineer specializing in Mobile Apps, 
-          CI/CD pipelines, and Backend Development. My goal is to create efficient, scalable, and user-friendly applications.
-        </p>
-      </div>
-    </section>
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>I am an experienced Software Engineer, Azure Cloud Engineer, and DevOps Engineer with expertise in CI/CD pipelines, cloud deployment, and mobile app development using Flutter with Node.js as the backend.</p>
+  </section>
 
-    <section id="projects" class="projects">
-      <div class="container">
-        <h2>My Projects</h2>
-        <div class="project-grid">
-          <article class="project-card">
-            <h3>Business Website</h3>
-            <p>A fully responsive business website with a modern UI.</p>
-          </article>
-          <article class="project-card">
-            <h3>JavaScript Web App</h3>
-            <p>An interactive and dynamic web application.</p>
-          </article>
-          <article class="project-card">
-            <h3>Portfolio Website</h3>
-            <p>A personal portfolio to showcase my skills and projects.</p>
-          </article>
-        </div>
+  <section id="projects" class="projects">
+    <h2>My Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <h3>Cloud Deployment Automation</h3>
+        <p>A scalable cloud deployment solution using Azure DevOps and Kubernetes.</p>
       </div>
-    </section>
+      <div class="project-card">
+        <h3>Mobile App (Flutter)</h3>
+        <p>A cross-platform mobile application powered by Flutter and Node.js.</p>
+      </div>
+      <div class="project-card">
+        <h3>CI/CD Pipeline</h3>
+        <p>Automated CI/CD workflow with GitHub Actions and Azure DevOps.</p>
+      </div>
+    </div>
+  </section>
 
-    <section id="contact" class="contact">
-      <div class="container">
-        <h2>Contact Me</h2>
-        <form id="contact-form">
-          <div class="input-group">
-            <input type="text" id="name" placeholder="Your Name" required>
-            <input type="email" id="email" placeholder="Your Email" required>
-          </div>
-          <textarea id="message" placeholder="Your Message" required></textarea>
-          <button type="submit" class="btn">Send Message</button>
-        </form>
-      </div>
-    </section>
-  </main>
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <form id="contact-form">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
 
   <footer>
-    <p>&copy; 2025 Joel Addition. All rights reserved.</p>
+    <p id="footer-date"></p>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    function updateFooterTime() {
+      const footer = document.getElementById('footer-date');
+      const now = new Date();
+      footer.textContent = `© ${now.getFullYear()} Joel Addition. Last updated: ${now.toLocaleString()}`;
+    }
+    updateFooterTime();
+    setInterval(updateFooterTime, 60000); // Update every 60 seconds
+  </script>
 </body>
 </html>
